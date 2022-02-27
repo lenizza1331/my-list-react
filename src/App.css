@@ -25,6 +25,7 @@ body {
   min-height: 60vh;
   border-radius: 10px;
   max-width: 90vw;
+  box-shadow: 0 0 15px rgb(143, 111, 136) ;
 }
 
 .container__item {

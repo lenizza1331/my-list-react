@@ -3,7 +3,7 @@ import { Component } from "react";
 export class MyList extends Component {
     state = {
         userInput: '',
-        myList: ["Visit the exhibition", "Buy to myself flowers", "Cook a pie", "Meet the dawn"]
+        myList: ["Visit the exhibition", "Buy nice flowers", "Cook a pie", "Meet the dawn"]
     }
     
     changeInput(e){
