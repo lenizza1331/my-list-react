@@ -56,6 +56,7 @@ ul {
   flex-direction: column-reverse;
   list-style: none;
   flex-wrap: wrap;
+  max-width: fit-content;
 }
 li, input, button {
   font-family: 'Montserrat', sans-serif;
@@ -141,5 +142,8 @@ input:focus{
   }
   input, button {
     font-size: 17px;
+  }
+  ul {
+    max-width: 100px;
   }
 }
