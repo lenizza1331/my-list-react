@@ -120,9 +120,20 @@ input:focus{
 
 .btn_add{
   background-color: #badbb7;
+  transition: all .5s ease;
+}
+.btn_add:hover {
+  background-color: #7ec777;
+  transform: scale(.95);
 }
 .btn_clear{
   background-color: #FF8080;
+  transition: all .5s ease;
+}
+.btn_clear:hover {
+  background-color: #fd6161;
+  transform: scale(.95);
+
 }
 
 
