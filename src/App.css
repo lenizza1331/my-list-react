@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background-image: url(https://images.unsplash.com/photo-1606327054517-6bf0b2e84cc4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+}
+
+.container {
+  background-color: #f0decc;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 60vh;
+  border-radius: 10px;
+  max-width: 90vw;
 }
 
-.App-link {
-  color: #61dafb;
+.container__item {
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #957DAD;
+  font-size: 40px;
+}
+p{
+  font-family: 'Architects Daughter', cursive;
+  color: #553C8B;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container__item__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+}
+
+
+ul {
+  display: flex;
+  flex-direction: column-reverse;
+  list-style: none;
+  flex-wrap: wrap;
+}
+li, input, button {
+  font-family: 'Montserrat', sans-serif;
+}
+li {
+  position: relative;
+  font-size: 20px;
+  line-height: 35px;
+}
+li:nth-child(even):before {
+  content: "";
+  background-image: url(./leaf.png);
+  background-size: contain;
+  background-position: center;
+  height: 30px;
+  width: 30px;
+  display: inline-block; 
+  position: absolute;
+  left: -30px;
+
+}
+li:nth-child(odd):before {
+  content: "";
+  background-image: url(./leaf_three.png);
+  background-size: contain;
+  background-position: center;
+  height: 30px;
+  width: 30px;
+  display: inline-block; 
+  position: absolute;
+  left: -30px;
+
+}
+
+input {
+  border: none;
+  background-color: #e4f4ff;
+  padding: 15px;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 14px;
+}
+input:focus{
+  box-shadow: 0 0 10px greenyellow;
+}
+.crossed{
+  text-decoration: line-through 2px rgb(153, 18, 130);
+  background-color: #f0d0e9;
+}
+
+.btn_add, .btn_clear {
+  padding: 10px;
+  margin-bottom: 10px;
+  min-width: 70%;
+  border: none;
+  text-align: center;
+  color: rgb(252, 241, 251);
+  font-size: 18px;
+}
+
+.btn_add{
+  background-color: #badbb7;
+}
+.btn_clear{
+  background-color: #FF8080;
+}
+
+
+
+
+
+
+
+@media all and (max-width: 1000px){
+  body {
+    background-image: url(https://images.unsplash.com/photo-1621606452946-026cd91d1ad2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
   }
-  to {
-    transform: rotate(360deg);
+  h1 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 17px;
+  }
+  input, button {
+    font-size: 17px;
   }
 }
