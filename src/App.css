@@ -52,22 +52,24 @@ p{
 }
 
 
-ul {
-  display: flex;
-  flex-direction: column-reverse;
+.ul {
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; */
   list-style: none;
-  flex-wrap: wrap;
   max-width: fit-content;
 }
-li, input, button {
+.li, input, button {
   font-family: 'Montserrat', sans-serif;
 }
-li {
+.li {
   position: relative;
   font-size: 20px;
   line-height: 35px;
+  border-bottom: 1px solid #553C8B;
+  margin: 10px;
 }
-li:nth-child(even):before {
+.li::before {
   content: "";
   background-image: url(./assets/leaf.png);
   background-size: contain;
@@ -79,7 +81,19 @@ li:nth-child(even):before {
   left: -30px;
 
 }
-li:nth-child(odd):before {
+/* .li:nth-child(even):before {
+  content: "";
+  background-image: url(./assets/leaf.png);
+  background-size: contain;
+  background-position: center;
+  height: 30px;
+  width: 30px;
+  display: inline-block; 
+  position: absolute;
+  left: -30px;
+
+}
+.li:nth-child(odd):before {
   content: "";
   background-image: url(./assets/leaf_three.png);
   background-size: contain;
@@ -90,7 +104,7 @@ li:nth-child(odd):before {
   position: absolute;
   left: -30px;
 
-}
+} */
 
 input {
   border: none;

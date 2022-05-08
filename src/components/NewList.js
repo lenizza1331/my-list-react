@@ -1,5 +1,5 @@
-import { useState } from 'react';
-
+import React, { useState } from 'react';
+import { Reorder, AnimatePresence } from 'framer-motion';
 
 function NewList (){
 
@@ -45,7 +45,12 @@ function NewList (){
     }
 
 
-
+    const variants = {
+        initial: {opacity:0 , height:0},
+        animate: {opacity:1 , height:'auto'},
+        exit: {opacity:0 , height:0},
+        transition: {duration:1.5, }
+    }
 
 
 return (
@@ -71,11 +76,30 @@ return (
                 </div>
 
                 <div className="container__item__list">
-                    <ul>
+                    <Reorder.Group 
+                        className='ul'
+                        axis='y'
+                        values={myList}
+                        onReorder={setMyList}
+                    >
+                        <AnimatePresence>
                         {myList.map((i, index)=>(
-                            <li onClick={crossItem} key={index}>{i}</li>
+                            <Reorder.Item 
+                                className='li' 
+                                onDoubleClick={crossItem} 
+                                key={index}
+                                value={i}
+                                whileDrag={{
+                                    scale: 1.3 ,
+                                    boxShadow: "rgba(0, 0, 0, 0.25) 1px 2px 4px"
+                                }}
+                                {...variants}
+                            >
+                                {i}
+                            </Reorder.Item>
                         ))}
-                    </ul>
+                        </AnimatePresence>
+                    </Reorder.Group>
                 </div>
                 </form>
 )
