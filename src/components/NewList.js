@@ -2,9 +2,14 @@ import React, { useState } from 'react';
 import { Reorder, AnimatePresence } from 'framer-motion';
 
 function NewList (){
-
     const [userInput, setUserInput] = useState('');
     const [myList, setMyList] = useState(["Visit the exhibition", "Buy nice flowers", "Cook a pie", "Meet the dawn"]);
+    const variants = {
+        initial: {opacity:0 , height:0},
+        animate: {opacity:1 , height:'auto'},
+        exit: {opacity:0 , height:0},
+        transition: {duration:.5 }
+    }
 
     const submitAdd = (e) => {
         e.preventDefault();
@@ -13,8 +18,6 @@ function NewList (){
     const changeInput = (e) => {
         setUserInput(e);
     }
-
-
 
     const addItem = (userInput) => {
         if (userInput === ""){
@@ -29,28 +32,20 @@ function NewList (){
         
     };
 
-
-
-
     const deleteAll = () => {
         setMyList([])
     };
-
-
-
 
     const crossItem = (event) => {
         const li = event.target;
         li.classList.toggle("crossed");
     }
 
-
-    const variants = {
-        initial: {opacity:0 , height:0},
-        animate: {opacity:1 , height:'auto'},
-        exit: {opacity:0 , height:0},
-        transition: {duration:1.5, }
-    }
+    const removeTodo = index => {
+        const newList = [...myList];
+        newList.splice(index, 1);
+        setMyList(newList);
+    };
 
 
 return (
@@ -86,8 +81,9 @@ return (
                         {myList.map((i, index)=>(
                             <Reorder.Item 
                                 className='li' 
-                                onDoubleClick={crossItem} 
-                                key={index}
+                                onClick={crossItem} 
+                                onDoubleClick={()=>removeTodo(index)}
+                                key={i}
                                 value={i}
                                 whileDrag={{
                                     scale: 1.3 ,
