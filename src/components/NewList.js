@@ -52,6 +52,7 @@ return (
     <form onSubmit={submitAdd}>
                 <div className="container__item__list">
                 <input
+                    className='forInput'
                     placeholder="Today I want to..."
                     type="text"
                     onChange={(e) => {
