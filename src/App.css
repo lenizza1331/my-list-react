@@ -167,7 +167,7 @@ input:focus{
     text-align: center;
     display: flex;
     justify-content: center;
-    max-width: fit-content;
+    width: 90vw;
   }
   h1 {
     font-size: 30px;
