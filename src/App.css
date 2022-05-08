@@ -68,6 +68,8 @@ p{
   line-height: 35px;
   border-bottom: 1px solid #553C8B;
   margin: 10px;
+  background-color: #f0decc;
+
 }
 .li::before {
   content: "";
