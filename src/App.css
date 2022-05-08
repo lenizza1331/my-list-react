@@ -69,7 +69,7 @@ li {
 }
 li:nth-child(even):before {
   content: "";
-  background-image: url(./leaf.png);
+  background-image: url(./assets/leaf.png);
   background-size: contain;
   background-position: center;
   height: 30px;
@@ -81,7 +81,7 @@ li:nth-child(even):before {
 }
 li:nth-child(odd):before {
   content: "";
-  background-image: url(./leaf_three.png);
+  background-image: url(./assets/leaf_three.png);
   background-size: contain;
   background-position: center;
   height: 30px;
